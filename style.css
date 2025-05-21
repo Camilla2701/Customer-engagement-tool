@@ -1,0 +1,443 @@
+@font-face {
+    font-family: 'Myriad Pro regular';
+    src: url('fonts/myriad-pro/MYRIADPRO-REGULAR.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro bold';
+    src: url('fonts/myriad-pro/MYRIADPRO-BOLD.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro italic';
+    src: url('fonts/myriad-pro/MYRIADPRO-ITALIC.OTF') format('truetype');
+}
+@font-face {
+    font-family: 'Myriad Pro bold light';
+    src: url(fonts/myriad-pro/MyriadPro-Light.otf) format('truetype');
+}
+.home__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/ai_generated_cityScape.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+/*Navigation bar*/
+.navBar{
+    font-family: 'Myriad Pro regular';
+    background-color: white;
+    height: 100vh;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    padding-block-start: 60px;
+    z-index: 1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    
+}
+.navBar:hover{
+    width: 250px;
+    transition: 0.5s ease-in-out;
+}
+
+.navBar:hover .menu__title{
+    display: block;
+    animation: fade-in 1s forwards;
+}
+.menu__title{
+    font-size: 16px;
+    font-family: 'Myriad Pro light';
+    color: #7B7B7B ;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+}
+
+@keyframes fade-in {
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.navBar:hover .menu__link{
+    display: block;
+}
+
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    place-self: center;
+    gap: 10px;
+}
+
+.breadcrumb{
+    text-decoration: none;
+    color: #C6C6C6 ;
+    font-family: 'Myriad Pro regular';
+    font-size: 16px;
+    margin: 0;
+}
+.breadcrumb.active{
+color: #E2000F;
+}
+.breadcrumbs__icon{
+    width: 25px;
+}
+
+.menu__itemWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column ;
+    gap: 20px;
+}
+.menu__dropdown{
+    list-style: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    padding-inline-start: 70px;
+}
+.menu__dropdown.active{
+    display: flex;
+}
+.menu__link{
+    text-decoration: none;
+    color: #7B7B7B ;
+    display: none;
+}
+.dropdown__link{
+    text-decoration: none;
+    color: #7B7B7B ;
+    padding-inline-start: 5px;
+}
+.menu__icon{
+    fill: #7B7B7B;
+    width: 44px;
+    min-width: 44px;
+}
+.menu__icon.active{
+    fill:#E2000F;
+}
+.menu__title.active{
+    color: #E2000F;
+}
+.topNavBar{
+    height: 35px;
+    width: 100vw;
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 94px 7px 29px 0px;;
+}
+.breadcrumbs__title{
+    font-family: 'Myriad Pro light';
+    font-size: 16px;
+    color: #e2000f ;
+    place-self: center;
+    margin: 0;
+}
+.home__main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+/*front page buttons*/
+
+.button__wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    border-radius: 20px;
+    padding-inline-end: 15px;
+}
+.button__wrapper.boat{
+    top: 23%;
+    left: 20%;
+}
+.button__wrapper.district{
+    top: 20%;
+    left: 50%;
+}
+.button__wrapper.residential{
+    top: 40%;
+    left: 78%;
+}
+.button__wrapper.commercial{
+    top: 60%;
+    left: 70%;
+}
+.button__wrapper.food{
+    top: 70%;
+    left: 35%;
+}
+.button__primary{
+    font-family: Myriad Pro regular;
+    text-decoration: none;
+    color: black;
+}
+.button__icon{
+    height: 15px;
+}
+
+/*application page*/
+
+.application__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/stock_image_apartments.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.infoBox{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+    font-family: myriad pro light;
+
+}
+.infoBox__description{
+    width: 280px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.144);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    padding-block-end: 50px;
+    display: none;
+}
+.infoBox__icon{
+    align-self: flex-end;
+    z-index: 1;
+}
+
+.infoBox:hover .infoBox__description{
+    display: block;
+}
+
+/*application page buttons*/
+
+.button__wrapper.snowMelting{
+    top: 90%;
+    left: 30%;
+}
+.button__wrapper.floorHeating{
+    top: 70%;
+    left: 70%;
+}
+.button__wrapper.heating{
+    top: 50%;
+    left: 60%;
+}
+.button__wrapper.radiator{
+    top: 65%;
+    left: 20%;
+}
+.button__wrapper.drives{
+    top: 35%;
+    left: 40%;
+}
+
+/*product page*/
+
+.products__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(images/radiator_image.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+}
+
+/*product page buttons*/
+
+.button__wrapper.valve{
+    top: 48%;
+    left: 58%;
+}
+.button__wrapper.thermostat{
+    top: 57%;
+    left: 53%;
+}
+
+/*components page*/
+
+.components__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.components__main{
+    height: 100vh;
+    padding-block-start: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 70px;
+}
+
+.components__title{
+    font-family: Myriad Pro light;
+    font-size: 32px;
+}
+
+/*Product slider*/
+
+.productSlider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 24px;
+}
+.productSlider__card{
+    width: 266px;
+    height: 450px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 24px;
+    padding-inline: 24px;
+    font-family: myriad pro light;
+    margin-inline: 20px;
+}
+.productSlider__cardImage{
+    width: 100%;
+}
+.productSlider__cardTitle{
+    font-size: 20px;
+}
+.productSlider__cardDescription{
+    font-size: 16px;
+    margin: 0;
+}
+.productSlider__cardFooter{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    padding-block-end: 24px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.productSlider__cardButton{
+    width: 107px;
+    height: 31px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: solid 1px black;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.productSlider__cardDetail{
+    margin-block: 5px;
+}
+.radioButtons{
+    flex-grow: 1;
+    margin-block-start: 70px;
+}
+
+
+/*component page*/
+
+.componentPage__body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.componentPage__main{
+    padding-block-start: 55px;
+    padding-inline-start: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: myriad pro light;
+    height: 100vh;
+}
+.componentPage__sideBar{
+    width: 510px ;
+    margin-block-start: 68px ;
+    
+}
+.specification__titleBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #C6C6C6;
+    height: 30px;
+}
+.specification__title{
+    margin: 0;
+}
+.specification__description{
+    overflow: hidden;
+    height: 0;
+}
+.specification__description.active{
+    height: auto;
+}
+.specification__icon.active{
+    transform: rotate(180deg);
+}
+.componentPage__button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 135px;
+    background-color: white;
+    border-radius: 12px;
+    border: solid 1px black;
+}
+.componentPage__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.componentPage__content{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-block-start: 55px;
+}
