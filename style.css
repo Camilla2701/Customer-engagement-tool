@@ -398,7 +398,8 @@ color: #E2000F;
 }
 .componentPage__sideBar{
     width: 510px ;
-    margin-block-start: 68px ;
+    margin-block:auto;
+    margin-inline: auto;
     
 }
 .specification__titleBar{
@@ -439,5 +440,5 @@ color: #E2000F;
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding-block-start: 55px;
+    margin: auto;
 }
